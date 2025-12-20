@@ -34,8 +34,6 @@
     "tsBuildInfoFile": "dist/tsconfig.tsbuildinfo"
   },
   "include": [
-    "../../apps/PR6_DCPS/.next/types/**/*.ts",
-    "../../dist/apps/PR6_DCPS/.next/types/**/*.ts",
     "next-env.d.ts",
     "src/**/*.js",
     "src/**/*.jsx",

@@ -17,7 +17,7 @@ const ControlMenu: React.FC<ControlMenuProps> = ({
   isRunning,
   onToggleRunning,
   onCenter,
-  onClear
+  onClear,
 }) => {
   return (
     <div className={styles.controlMenu}>
@@ -27,7 +27,9 @@ const ControlMenu: React.FC<ControlMenuProps> = ({
           id="interactionArea"
           type="number"
           value={params.interactionArea}
-          onChange={(e) => onParamsChange({ interactionArea: Number(e.target.value) })}
+          onChange={(e) =>
+            onParamsChange({ interactionArea: Number(e.target.value) })
+          }
           min="1"
           className={styles.input}
           disabled={isRunning}
@@ -65,7 +67,9 @@ const ControlMenu: React.FC<ControlMenuProps> = ({
           id="updateInterval"
           type="number"
           value={params.updateInterval}
-          onChange={(e) => onParamsChange({ updateInterval: Number(e.target.value) })}
+          onChange={(e) =>
+            onParamsChange({ updateInterval: Number(e.target.value) })
+          }
           min="0.1"
           step="0.1"
           className={styles.input}
@@ -75,14 +79,13 @@ const ControlMenu: React.FC<ControlMenuProps> = ({
       <div className={styles.buttonGroup}>
         <button
           onClick={onToggleRunning}
-          className={`${styles.menuButton} ${isRunning ? styles.stopButton : styles.startButton}`}
+          className={`${styles.menuButton} ${
+            isRunning ? styles.stopButton : styles.startButton
+          }`}
         >
           {isRunning ? 'Стоп' : 'Старт'}
         </button>
-        <button
-          onClick={onCenter}
-          className={styles.menuButton}
-        >
+        <button onClick={onCenter} className={styles.menuButton}>
           Центрувати
         </button>
         <button

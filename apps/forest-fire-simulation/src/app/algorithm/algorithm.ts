@@ -31,9 +31,7 @@ function getNeighborIndices(
 
 export function generateCoordMap(cells: Cell[]): Map<string, number> {
   const coordMap = new Map<string, number>();
-  cells.forEach((cell, index) =>
-    coordMap.set(`${cell.x},${cell.y}`, index)
-  );
+  cells.forEach((cell, index) => coordMap.set(`${cell.x},${cell.y}`, index));
   return coordMap;
 }
 
@@ -97,6 +95,6 @@ export function calculateNextGeneration(
 
   return {
     flammableCells,
-    updatedCellsMap
+    updatedCellsMap,
   };
 }

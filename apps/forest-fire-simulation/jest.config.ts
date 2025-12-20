@@ -1,5 +1,5 @@
 export default {
-  displayName: 'PR6_DCPS',
+  displayName: 'forest-fire-simulation',
   preset: '../../jest.preset.js',
   transform: {
     '^(?!.*\\.(js|jsx|ts|tsx|css|json)$)': '@nx/react/plugins/jest',

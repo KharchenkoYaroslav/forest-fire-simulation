@@ -1,4 +1,4 @@
-import './global.css';
+import './page.module.scss';
 
 export const metadata = {
   title: 'Модель лісової пожежі',
@@ -12,7 +12,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body suppressHydrationWarning={true}>{children}</body>
     </html>
   );
 }

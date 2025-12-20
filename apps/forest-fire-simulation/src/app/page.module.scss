@@ -50,44 +50,44 @@
     border-color: #007bff;
   }
 }
-.buttonGroup{
+.buttonGroup {
   display: flex;
   flex-direction: row;
   gap: 10px;
   .menuButton {
-  padding: 8px ;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: 500;
-  transition: all 0.2s;
-  background-color: #007bff;
-  color: white;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s;
+    background-color: #007bff;
+    color: white;
 
-  &:hover {
-    background-color: #0056b3;
+    &:hover {
+      background-color: #0056b3;
+    }
+
+    &:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
   }
 
-  &:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
+  .startButton {
+    background-color: #28a745;
+
+    &:hover {
+      background-color: #218838;
+    }
   }
-}
 
-.startButton {
-  background-color: #28a745;
+  .stopButton {
+    background-color: #dc3545;
 
-  &:hover {
-    background-color: #218838;
+    &:hover {
+      background-color: #c82333;
+    }
   }
-}
-
-.stopButton {
-  background-color: #dc3545;
-
-  &:hover {
-    background-color: #c82333;
-  }
-}
 }

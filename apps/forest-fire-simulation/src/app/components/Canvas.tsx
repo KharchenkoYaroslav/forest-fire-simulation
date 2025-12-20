@@ -54,18 +54,15 @@ const Canvas = forwardRef<CanvasRef, CanvasProps>(
           ctx.fillStyle = '#FF4500';
         } else if (cell.state === 'E' || (cell.state === 'B' && Full)) {
           ctx.fillStyle = '#8B4513';
-
         } else if (cell.state === 'T') {
           ctx.fillStyle = '#90EE90';
-
         } else {
           ctx.fillStyle = 'gray';
-
         }
         if (!Full && cell.state === 'B') {
-          ctx.fillRect(x+0.5, y+0.5, size-1, size-1);
+          ctx.fillRect(x + 0.5, y + 0.5, size - 1, size - 1);
         } else {
-          ctx.fillRect(x+0.1, y+0.1, size-0.2, size-0.2);
+          ctx.fillRect(x + 0.1, y + 0.1, size - 0.2, size - 0.2);
         }
       },
       []
@@ -102,8 +99,6 @@ const Canvas = forwardRef<CanvasRef, CanvasProps>(
         const y = offsetY + cell.y * CELL_SIZE * scale;
         drawCell(ctx, cell, size, x, y, isRunning);
       });
-
-
     }, [field.width, drawCell, isRunning]);
 
     const setScale = useCallback(
@@ -134,7 +129,7 @@ const Canvas = forwardRef<CanvasRef, CanvasProps>(
         transformRef.current = {
           offsetX: canvasRef.current.width / 2,
           offsetY: canvasRef.current.height / 2,
-          scale: transformRef.current.scale
+          scale: transformRef.current.scale,
         };
 
         drawFullGrid();
@@ -156,7 +151,6 @@ const Canvas = forwardRef<CanvasRef, CanvasProps>(
 
           drawCell(ctx, cell, size, x, y, false);
         });
-
       },
       [drawCell]
     );
