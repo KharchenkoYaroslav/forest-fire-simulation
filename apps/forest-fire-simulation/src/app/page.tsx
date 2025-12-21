@@ -175,6 +175,7 @@ const Page: React.FC = () => {
               ? {
                   ...c,
                   state: c.state === 'T' ? 'B' : c.state === 'B' ? 'E' : 'T',
+                  burnTime: 0,
                 }
               : c
           ),

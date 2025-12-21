@@ -42,7 +42,14 @@ export async function POST(request: NextRequest) {
         (cell: Cell) => cell.x === x && cell.y === y
       );
 
-      cells[index] = nonTreeCell || { x, y, state: 'T', burnTime: 0 };
+      cells[index] = nonTreeCell
+        ? {
+            x,
+            y,
+            state: nonTreeCell.state,
+            burnTime: nonTreeCell.burnTime ?? 0,
+          }
+        : { x, y, state: 'T', burnTime: 0 };
     }
 
     const field: Field = {
